@@ -240,16 +240,15 @@ export default {
 				: authorName(this.app.author)
 			const license = t('settings', '{license}-licensed', { license: ('' + this.app.licence).toUpperCase() })
 
-			const subtitle = t('settings', 'by {author}\n{license}', { author, license })
+			const subname = t('settings', 'by {author}\n{license}', { author, license })
 
 			return {
-				subtitle,
 				background: this.app.screenshot && this.screenshotLoaded
 					? this.app.screenshot
 					: this.app.preview,
 				compact: !(this.app.screenshot && this.screenshotLoaded),
-				title: this.app.name,
-
+				name: this.app.name,
+				subname,
 			}
 		},
 		changelog() {

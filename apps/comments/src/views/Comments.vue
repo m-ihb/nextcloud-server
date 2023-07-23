@@ -65,7 +65,7 @@
 
 			<!-- Error message -->
 			<template v-else-if="error">
-				<NcEmptyContent class="comments__error" :title="error">
+				<NcEmptyContent class="comments__error" :name="error">
 					<template #icon>
 						<AlertCircleOutlineIcon />
 					</template>
